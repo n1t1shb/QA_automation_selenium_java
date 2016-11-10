@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="2044" started-at="2016-11-10T11:47:15Z" finished-at="2016-11-10T11:47:17Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="2044" started-at="2016-11-10T11:47:15Z" finished-at="2016-11-10T11:47:17Z">
+      <class name="com.lexmark.indus.automation.organizer.BasicORGTest">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.lexmark.indus.automation.organizer.BasicORGTest@47c62251]" name="beforeSuite" is-config="true" duration-ms="22982" started-at="2016-11-10T17:16:52Z" finished-at="2016-11-10T17:17:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[localhost:8080/ORG/#organizer/view/SysDocumentsAll/user/456/]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[administrator]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[aa]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Organizer]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTestMethod(java.lang.reflect.Method, [Ljava.lang.Object;)[pri:0, instance:com.lexmark.indus.automation.organizer.BasicORGTest@47c62251]" name="beforeTestMethod" is-config="true" duration-ms="16" started-at="2016-11-10T17:17:15Z" finished-at="2016-11-10T17:17:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.lexmark.indus.automation.organizer.BasicORGTest.testmethod() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@4a883b15]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestMethod -->
+        <test-method status="PASS" signature="testmethod()[pri:0, instance:com.lexmark.indus.automation.organizer.BasicORGTest@47c62251]" name="testmethod" duration-ms="2006" started-at="2016-11-10T17:17:15Z" finished-at="2016-11-10T17:17:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmethod -->
+        <test-method status="PASS" signature="afterTestMethod(java.lang.reflect.Method, [Ljava.lang.Object;)[pri:0, instance:com.lexmark.indus.automation.organizer.BasicORGTest@47c62251]" name="afterTestMethod" is-config="true" duration-ms="1" started-at="2016-11-10T17:17:17Z" finished-at="2016-11-10T17:17:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.lexmark.indus.automation.organizer.BasicORGTest.testmethod() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@4a883b15]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestMethod -->
+        <test-method status="PASS" signature="testmethod2()[pri:0, instance:com.lexmark.indus.automation.organizer.BasicORGTest@47c62251]" name="testmethod2" duration-ms="1" started-at="2016-11-10T17:17:17Z" depends-on-methods="com.lexmark.indus.automation.organizer.BasicORGTest.testmethod" finished-at="2016-11-10T17:17:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmethod2 -->
+        <test-method status="PASS" signature="beforeTestMethod(java.lang.reflect.Method, [Ljava.lang.Object;)[pri:0, instance:com.lexmark.indus.automation.organizer.BasicORGTest@47c62251]" name="beforeTestMethod" is-config="true" duration-ms="0" started-at="2016-11-10T17:17:17Z" finished-at="2016-11-10T17:17:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.lexmark.indus.automation.organizer.BasicORGTest.testmethod2() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@5824a83d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestMethod -->
+        <test-method status="PASS" signature="afterTestMethod(java.lang.reflect.Method, [Ljava.lang.Object;)[pri:0, instance:com.lexmark.indus.automation.organizer.BasicORGTest@47c62251]" name="afterTestMethod" is-config="true" duration-ms="0" started-at="2016-11-10T17:17:17Z" finished-at="2016-11-10T17:17:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.lexmark.indus.automation.organizer.BasicORGTest.testmethod2() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@5824a83d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestMethod -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.lexmark.indus.automation.organizer.BasicORGTest@47c62251]" name="afterSuite" is-config="true" duration-ms="4065" started-at="2016-11-10T17:17:17Z" finished-at="2016-11-10T17:17:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.lexmark.indus.automation.organizer.BasicORGTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

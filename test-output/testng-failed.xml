@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="password" value="aa"/>
+  <parameter name="user" value="administrator"/>
+  <parameter name="url" value="localhost:8080/ORG/#organizer/view/SysDocumentsAll/user/456/"/>
+  <parameter name="browserType" value="Chrome"/>
+  <parameter name="siteType" value="Organizer"/>
+  <test name="Test">
+    <classes>
+      <class name="com.lexmark.indus.automation.organizer.BasicORGTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Failed suite [Suite] -->

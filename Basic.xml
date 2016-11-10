@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <!--  <parameter name="browser" value="Firefox"/>-->
+  <parameter name="browserType" value="Chrome"/><!-- Chrome | Firefox -->
+  <parameter name="url" value="localhost:8080/ORG/#organizer/view/SysDocumentsAll/user/456/"/>
+  <parameter name="siteType" value="Organizer"/><!-- Organizer | ActionManager -->
+  <parameter name="user" value="administrator"/>
+  <parameter name="password" value="aa"/>
+  <test name="Test">
+    <classes>
+   		<class name="com.lexmark.indus.automation.organizer.BasicORGTest"/> 
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
