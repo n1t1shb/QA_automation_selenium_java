@@ -2,13 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <parameter name="browserType" value="Firefox"/><!-- Chrome | Firefox -->
-  <parameter name="url" value="http://mediaportal.dhcp.indiadev.lexmark.com:9000"/>
-  <parameter name="siteType" value="AdminPortal"/><!-- AdminPortal | CustomerSite -->
-  <parameter name="user" value="admin@example.com"/>
-  <parameter name="password" value="password"/>
+  <parameter name="url" value="localhost:8080/ORG/#organizer/view/SysDocumentsAll/user/456/"/>
+  <parameter name="siteType" value="Organizer"/><!-- Organizer | ActionManager -->
+  <parameter name="user" value="administrator"/>
+  <parameter name="password" value="aa"/>
   <test name="Test">
     <classes>
-      <class name="com.lexmark.automation.analytics.ResoldAnalyticsTest"/>
+      <class name="com.lexmark.indus.automation.organizer.BasicORGTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

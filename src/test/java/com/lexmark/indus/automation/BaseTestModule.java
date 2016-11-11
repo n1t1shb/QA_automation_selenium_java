@@ -5,16 +5,25 @@ package com.lexmark.indus.automation;
 
 import java.lang.reflect.Method;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+
+/*For Report Generation*/
+import java.awt.AWTException;
+import java.io.IOException;
+import org.testng.annotations.Listeners;
+import atu.testng.reports.ATUReports;
+import atu.testng.reports.listeners.ATUReportsListener;
+import atu.testng.reports.listeners.ConfigurationListener;
+import atu.testng.reports.listeners.MethodListener;
+import atu.testng.reports.logging.LogAs;
+import atu.testng.selenium.reports.CaptureScreen;
+import atu.testng.selenium.reports.CaptureScreen.ScreenshotOf;
+/**end**/
 
 /**
  * Abstract test module which contains all the methods required to run a web portal
@@ -24,8 +33,14 @@ import org.testng.annotations.Parameters;
  * 
  */
 
+@Listeners({ ATUReportsListener.class, ConfigurationListener.class,
+    MethodListener.class })
 public abstract class BaseTestModule {
 
+	 {
+	    System.setProperty("atu.reporter.config", "D:/E2E/indus-automation/atu.properties");
+	 }
+	 
 	protected static Browser browser;
 	protected static Website website;
 
@@ -43,13 +58,24 @@ public abstract class BaseTestModule {
 				website.login(user, password);
 			}
 		}
+		// ATU Reports
+        ATUReports.setWebDriver(browser.getDriver());
+        ATUReports.indexPageDescription = "Nitish Bhattacharjee";
 	}
 
 	@AfterSuite
-	protected void afterSuite() throws InterruptedException {
+	protected void afterSuite() throws InterruptedException,AWTException, IOException {
 		if (website.hasActiveSession()) {
 			website.logout();
 		}
+		ATUReports.add("INfo Step", LogAs.INFO, new CaptureScreen(
+                ScreenshotOf.BROWSER_PAGE));
+        ATUReports.add("Pass Step", LogAs.PASSED, new CaptureScreen(
+                ScreenshotOf.DESKTOP));
+        ATUReports.add("Warning Step", LogAs.WARNING,
+                new CaptureScreen(ScreenshotOf.DESKTOP));
+        ATUReports.add("Fail step", LogAs.FAILED, new CaptureScreen(
+                ScreenshotOf.DESKTOP));
 		browser.close();
 	}
 
@@ -94,35 +120,6 @@ public abstract class BaseTestModule {
 				}
 			}
 		}
-	}
-
-	/**
-	 * Get the collection link in left pane
-	 * 
-	 * @return An instance of {@link By}
-	 */
-	protected By getCollectionLink() {
-		return By.xpath("//div[@id='siteNavigation']/ul[2]/li/span[2]");
-	}
-
-	/**
-	 * Utility method which provide explicit lock until grid loaded successfully
-	 */
-	protected void waitForGridLoading() {
-		WebDriverWait waitForGridLoad = new WebDriverWait(browser.getDriver(), 50);
-		waitForGridLoad.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath("//input[@class='column-header-checkbox'][@type='checkbox']")));
-	}
-
-	/**
-	 * Get search input element
-	 * 
-	 * @return An instance of {@link WebElement}
-	 */
-	protected WebElement getSearchInput() {
-		WebElement searchInput = browser.getDriver().findElement(By.id("searchInput"));
-		searchInput.clear();
-		return searchInput;
 	}
 
 }
