@@ -1,4 +1,4 @@
-# Indus QA Automation Framework
+# QA Automation Framework
 
 ## Prerequisites
 1. Install Java 8 and include in PATH
